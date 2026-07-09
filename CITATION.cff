@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use TickBench in your research, please cite it as below."
+title: "TickBench: A Benchmark Harness for Performance- and Correctness-Critical Financial Dashboard Engineering"
+type: software
+authors:
+  - family-names: Fedytskyi
+    given-names: Roman
+    email: fedytskyi@gmail.com
+version: 0.1.0
+date-released: 2026-07-08
+license: MIT
+repository-code: "https://github.com/RomanFedytskyi/TickBench"
+keywords:
+  - benchmark
+  - fintech
+  - coding agents
+  - real-time dashboards
+  - display staleness
+  - web performance
+  - accessibility
+  - security

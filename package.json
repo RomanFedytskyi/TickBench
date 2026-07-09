@@ -1,0 +1,61 @@
+{
+  "name": "tick-bench-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Benchmark your live data grid under real market load: display staleness, update latency, frame stability, money formatting, XSS, and WCAG — replayable seeded tick streams, executable oracles, one pass/fail verdict.",
+  "license": "MIT",
+  "author": "Roman Fedytskyi <fedytskyi@gmail.com>",
+  "bin": {
+    "tickbench": "src/cli.mjs"
+  },
+  "main": "src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "src",
+    "tasks",
+    "schemas",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff"
+  ],
+  "scripts": {
+    "gen": "node src/cli.mjs gen --seed 24301 --duration 8000 --out traces/demo.json",
+    "bench": "node src/cli.mjs bench --task tasks/stream-grid",
+    "bench:smoke": "node src/cli.mjs gen --seed 24301 --duration 2000 --out traces/smoke.json && node src/cli.mjs bench --task tasks/stream-grid --trace traces/smoke.json --out tickbench-results-smoke",
+    "test": "node --test",
+    "validate": "node src/cli.mjs validate --task tasks/stream-grid"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanFedytskyi/TickBench.git"
+  },
+  "keywords": [
+    "benchmark",
+    "fintech",
+    "dashboard",
+    "data-grid",
+    "real-time",
+    "streaming",
+    "coding-agents",
+    "llm",
+    "ai-generated-code",
+    "web-performance",
+    "accessibility",
+    "wcag",
+    "xss",
+    "display-staleness",
+    "playwright"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "axe-core": "^4.10.0",
+    "playwright-core": "^1.50.0"
+  },
+  "types": "src/index.d.ts"
+}

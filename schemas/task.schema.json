@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tickbench-task/1",
+  "type": "object",
+  "required": ["schema", "task", "trace", "thresholds"],
+  "properties": {
+    "schema": { "const": "tickbench-task/1" },
+    "task": { "type": "string" },
+    "trace": { "type": "string" },
+    "thresholds": {
+      "type": "object",
+      "required": ["catchUpP95Ms", "staleCellFramePctMax", "longFramePctMax"],
+      "properties": {
+        "catchUpP95Ms": { "type": "number" },
+        "staleCellFramePctMax": { "type": "number" },
+        "longFramePctMax": { "type": "number" },
+        "finalErrorsMax": { "type": "number" },
+        "axeViolationsMax": { "type": "number" },
+        "highSecurityFindingsMax": { "type": "number" }
+      }
+    },
+    "validationMutants": { "type": "array", "items": { "type": "string" } }
+  }
+}

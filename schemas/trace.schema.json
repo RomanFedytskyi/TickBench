@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tickbench-trace/1",
+  "type": "object",
+  "required": ["schema", "seed", "synthetic", "symbols", "cols", "durationMs", "ticks"],
+  "properties": {
+    "schema": { "const": "tickbench-trace/1" },
+    "seed": { "type": "number" },
+    "synthetic": { "type": "boolean", "description": "false only for traces recorded from real feeds, which must ship a *.provenance.md" },
+    "generated": { "type": ["string", "null"] },
+    "symbols": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "cols": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "durationMs": { "type": "number", "exclusiveMinimum": 0 },
+    "ticks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t", "sym", "col", "v"],
+        "properties": {
+          "t": { "type": "number", "minimum": 0, "description": "ms offset from trace start" },
+          "sym": { "type": "string" },
+          "col": { "type": "string" },
+          "v": { "type": "number", "description": "integer cents for price columns; count for qty" }
+        }
+      }
+    }
+  }
+}

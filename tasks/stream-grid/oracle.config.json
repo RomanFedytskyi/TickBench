@@ -1,0 +1,14 @@
+{
+  "schema": "tickbench-task/1",
+  "task": "stream-grid",
+  "trace": "traces/demo.json",
+  "thresholds": {
+    "catchUpP95Ms": 250,
+    "staleCellFramePctMax": 20,
+    "longFramePctMax": 5,
+    "finalErrorsMax": 0,
+    "axeViolationsMax": 0,
+    "highSecurityFindingsMax": 0
+  },
+  "validationMutants": ["naive-baseline"]
+}

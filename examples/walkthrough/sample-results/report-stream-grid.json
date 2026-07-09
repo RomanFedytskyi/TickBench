@@ -1,0 +1,74 @@
+{
+  "schema": "tickbench-report/1",
+  "generated": "2026-07-09T03:39:41.775Z",
+  "task": "stream-grid",
+  "trace": "(generated in-memory, seed 0x5eed)",
+  "traceSeed": 24301,
+  "node": "v22.22.3",
+  "results": {
+    "reference": {
+      "impl": "<package>/tasks/stream-grid/reference/grid.mjs",
+      "runtime": {
+        "ticksDispatched": 17449,
+        "cellsChecked": 160,
+        "catchUpMs": {
+          "p50": 24.5,
+          "p95": 31.700000002980232,
+          "p99": 32.900000005960464,
+          "n": 10531
+        },
+        "staleCellFramePct": 17.44,
+        "frames": 512,
+        "longFramePct": 0,
+        "worstFrameMs": 33.4,
+        "finalValueErrors": 0,
+        "finalFormatErrors": 0,
+        "xssTriggered": false,
+        "implError": null
+      },
+      "a11y": [],
+      "security": [],
+      "verdict": {
+        "functional_final_state": true,
+        "staleness": true,
+        "frame_stability": true,
+        "security": true,
+        "accessibility": true,
+        "no_runtime_error": true,
+        "regulated_grade_pass": true
+      }
+    },
+    "simple-table": {
+      "impl": "./adapter.mjs",
+      "runtime": {
+        "ticksDispatched": 17449,
+        "cellsChecked": 160,
+        "catchUpMs": {
+          "p50": 24.69999999552965,
+          "p95": 31.799999997019768,
+          "p99": 33.29999999701977,
+          "n": 10485
+        },
+        "staleCellFramePct": 17.48,
+        "frames": 513,
+        "longFramePct": 0,
+        "worstFrameMs": 16.8,
+        "finalValueErrors": 0,
+        "finalFormatErrors": 0,
+        "xssTriggered": false,
+        "implError": null
+      },
+      "a11y": [],
+      "security": [],
+      "verdict": {
+        "functional_final_state": true,
+        "staleness": true,
+        "frame_stability": true,
+        "security": true,
+        "accessibility": true,
+        "no_runtime_error": true,
+        "regulated_grade_pass": true
+      }
+    }
+  }
+}
