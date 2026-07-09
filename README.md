@@ -9,8 +9,7 @@
 [![harness](https://img.shields.io/badge/submissions-any%20framework-blue.svg)](#benchmark-your-own-component)
 [![license](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
 [![data](https://img.shields.io/badge/traces-CC--BY--4.0-orange.svg)](docs/task-authoring.md)
-<!-- After the first GitHub Release is archived by Zenodo, add:
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.XXXXXXXX-blue.svg)](https://doi.org/10.5281/zenodo.XXXXXXXX) -->
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.1294564668-blue.svg)](https://doi.org/10.5281/zenodo.21272054)
 [![GitHub last commit](https://img.shields.io/github/last-commit/RomanFedytskyi/TickBench.svg)](https://github.com/RomanFedytskyi/TickBench)
 
 > **Never ship a grid that paints a stale price.**
